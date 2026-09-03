@@ -25,7 +25,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <p className="eyebrow">{messages.hero.eyebrow}</p>
           <h1 id="hero-title">{messages.hero.title}</h1>
           <p className="hero__description">{lines(messages.hero.copy)}</p>
-          <a className="text-link" href="#products">{messages.hero.cta}<span aria-hidden="true">↗</span></a>
+          <a className="text-link" href={`/${locale}/products`}>{messages.hero.cta}<span aria-hidden="true">↗</span></a>
         </div>
         <div className="hero__visual">
           <span className="hero__index" aria-hidden="true">01</span>
@@ -49,7 +49,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="design__texture" aria-hidden="true" />
         <div className="design__content">
           <p className="eyebrow">{messages.design.eyebrow}</p><h2 id="design-title">{lines(messages.design.title)}</h2>
-          <a className="text-link text-link--light" href="#about">{messages.design.cta}<span aria-hidden="true">↗</span></a>
+          <a className="text-link text-link--light" href={`/${locale}/design`}>{messages.design.cta}<span aria-hidden="true">↗</span></a>
         </div>
         <p className="design__material" aria-hidden="true">{messages.design.material}</p>
       </section>

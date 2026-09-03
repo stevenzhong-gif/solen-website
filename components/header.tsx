@@ -6,10 +6,10 @@ import { LanguageSelector } from "./language-selector";
 
 export function Header({ locale, messages }: { locale: Locale; messages: Messages }) {
   const navItems = [
-    { label: messages.nav.products, href: `/${locale}#products` },
-    { label: messages.nav.design, href: `/${locale}#design` },
-    { label: messages.nav.about, href: `/${locale}#about` },
-    { label: messages.nav.support, href: `/${locale}#support` },
+    { label: messages.nav.products, href: `/${locale}/products` },
+    { label: messages.nav.design, href: `/${locale}/design` },
+    { label: messages.nav.about, href: `/${locale}/about` },
+    { label: messages.nav.support, href: `/${locale}/support` },
   ];
   return <header className="site-header">
     <a className="brand" href={`/${locale}#top`} aria-label={messages.accessibility.home}><span className="brand__mark" aria-hidden="true"><Image src={logo} alt="" priority /></span><span>SOLEN</span></a>
