@@ -6,6 +6,12 @@ import { getProductDetailHref, products, type ProductId } from "@/content/produc
 
 type ProductComposition = "dock" | "surface" | "vertical";
 
+type ProductStoryChapter = {
+  eyebrow: string;
+  title: string;
+  copy: string;
+};
+
 export function ProductHero({ name, image, content, composition = "dock" }: { name: string; image: (typeof products)[number]["image"]; content: ProductDetailMessages; composition?: ProductComposition }) {
   return <section className={`product-detail-hero product-detail-hero--${composition}`} aria-labelledby="product-title">
     <div className="product-detail-hero__copy"><p className="eyebrow">{content.eyebrow}</p><h1 id="product-title">{name}</h1><p className="product-detail-hero__statement">{content.statement}</p></div>
@@ -17,8 +23,23 @@ export function ProductConceptNotice({ children }: { children: string }) {
   return <aside className="product-concept-notice"><span aria-hidden="true">Concept / 01</span><p>{children}</p></aside>;
 }
 
-export function ProductNarrativeSection({ eyebrow, title, copy, tone = "paper", composition = "dock" }: { eyebrow: string; title: string; copy: string; tone?: "paper" | "beige" | "charcoal"; composition?: ProductComposition }) {
-  return <section className={`product-narrative product-narrative--${tone} product-narrative--${composition}`}><p className="eyebrow">{eyebrow}</p><div><h2>{title}</h2><p>{copy}</p></div></section>;
+export function ProductStoryStage({ name, image, chapters, composition = "dock" }: { name: string; image: (typeof products)[number]["image"]; chapters: ProductStoryChapter[]; composition?: ProductComposition }) {
+  return <div className={`product-story product-story--${composition}`}>
+    <div className="product-story__stage" aria-hidden="true">
+      <div className="product-story__visual">
+        <span className="product-story__name">SOLEN / {name}</span>
+        <Image src={image} alt="" sizes="(max-width: 900px) 100vw, 52vw" />
+        <span className="product-story__axis" />
+      </div>
+    </div>
+    <div className="product-story__chapters">
+      {chapters.map((chapter, index) => <section className="product-story__chapter" key={chapter.eyebrow}>
+        <div className="product-story__chapter-index"><span>0{index + 1}</span><span>{chapter.eyebrow}</span></div>
+        <h2>{chapter.title}</h2>
+        <p>{chapter.copy}</p>
+      </section>)}
+    </div>
+  </div>;
 }
 
 export function ProductMaterialSection({ content, composition = "dock" }: { content: ProductDetailMessages["material"]; composition?: ProductComposition }) {
