@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOLEN Production Readiness Review"
+  short_description: "Review SOLEN technical release readiness"
+  default_prompt: "Use $solen-review-production-readiness to audit the SOLEN site before a production release."

@@ -62,16 +62,41 @@ export const zhTW = {
       ] },
       products: { eyebrow: "設計進入情境", title: "同一理念，形成三種不同形態。", copy: "探索 SOLEN 共通的設計方向，如何在三項概念產品中各自成形。", conceptNotice: "三項皆為概念產品；圖片用於傳達設計方向，不代表已確認的工程規格。", cta: "探索所有產品" },
     },
-    about: { metadata: { title: "關於 — SOLEN", description: "SOLEN 打造用心科技，支援日常環境而不主導生活。" }, eyebrow: "關於 SOLEN", title: "科技，自然融入生活。", intro: "SOLEN 源自一個簡單想法：科技應支援日常環境，而非主導生活。", sections: [
-      { title: "我們的理念", copy: "我們相信，實用科技也能從容、細膩並自然融入居所。每一項決定，都從產品如何進入真實生活開始。" },
-      { title: "我們的方法", copy: "我們在機能、材質與形態之間尋找平衡，去除不必要的複雜，同時保留令人愉悅的使用細節。" },
-      { title: "為日常空間而設計", copy: "無論專注工作或自在生活，SOLEN 產品都安靜地與你共享空間，支援真正重要的日常節奏。" },
-    ] },
-    support: { metadata: { title: "支援 — SOLEN", description: "瀏覽 SOLEN 產品支援資訊架構。" }, eyebrow: "SOLEN 支援", title: "需要什麼協助？", intro: "選擇主題，瀏覽適用於 SOLEN 產品的支援資訊架構。", categories: [
-      { title: "產品協助", copy: "查看 SOLEN 產品使用與日常保養的清楚指引。" },
-      { title: "設定與開始使用", copy: "透過簡明步驟，安心開始使用你的產品。" },
-      { title: "保固與服務", copy: "此概念網站目前未提供保固條款或服務選項。" },
-      { title: "聯絡我們", copy: "此概念網站目前未提供聯絡管道。" },
-    ], unavailable: "目前未提供資訊", notice: "SOLEN 為虛構品牌，目前未提供即時支援與服務申請。" },
+    about: {
+      metadata: { title: "關於 — SOLEN", description: "認識 SOLEN：以從容、用心的日常空間為出發點的概念科技品牌。" },
+      eyebrow: "關於 SOLEN", title: "科技，自然融入生活。", intro: "SOLEN 從一個簡單想法出發：科技應支援日常環境，而非主導生活。", thesis: "讓物件、人與空間，建立更從容的關係。",
+      idea: { eyebrow: "核心想法", title: "科技可以存在，而不必爭取目光。", copy: "SOLEN 將實用物件想像為空間的一部分。它們透過清楚與輕鬆展現價值，而不是增加視覺干擾。" },
+      relationship: { eyebrow: "共同關係", title: "科技與空間，融入生活。", items: [
+        { title: "科技", copy: "被思考為支援日常節奏的安靜工具。" },
+        { title: "空間", copy: "本身就是設計的一部分，而不只是背景。" },
+        { title: "生活", copy: "始終位於每項概念與互動的中心。" },
+      ] },
+      approach: { eyebrow: "我們的方法", title: "從真正需要的開始。", lead: "清楚，來自理解一件物件需要成為什麼，以及不需要成為什麼。", copy: "SOLEN 在形態、材質方向與日常目的之間尋找平衡。每項概念都以容易理解、安定從容，並能自然存在於現代空間為方向。" },
+      principles: { eyebrow: "引導我們的原則", title: "安靜原則，清楚意圖。", items: [
+        { title: "思考整體空間。", copy: "看見產品與房間，以及身處其中的人之間的關係。" },
+        { title: "減少視覺干擾。", copy: "以層次與比例，取代不必要的複雜。" },
+        { title: "讓科技容易親近。", copy: "以溫度、清楚與從容存在，塑造每項概念。" },
+        { title: "支援真實日常。", copy: "專注於用心物件能自然融入的平常片刻。" },
+      ] },
+      closing: { eyebrow: "SOLEN / 概念品牌", title: "為科技周圍的生活而設計。", copy: "SOLEN 以一項共同信念連結概念產品家族：當科技能融入周遭環境，便更顯用心。", conceptNotice: "SOLEN 是虛構概念品牌；產品與圖片用於表達設計方向，不代表已確認的商業或工程規格。", designCta: "探索設計理念", productsCta: "瀏覽產品系列" },
+    },
+    support: {
+      metadata: { title: "支援 — SOLEN", description: "瀏覽 SOLEN 概念產品家族目前提供的資訊。" },
+      eyebrow: "SOLEN 支援", title: "需要協助，從這裡開始。", intro: "探索產品家族、了解目前提供的資訊範圍，並找到關於此概念網站的清楚說明。", conceptNotice: "SOLEN 是虛構概念品牌，目前未提供即時支援、服務申請或產品文件。",
+      products: { eyebrow: "選擇產品", title: "探索產品家族。", copy: "每個產品頁呈現已核准的概念故事、設計方向，以及它與 SOLEN 家族的關係。", cta: "查看概念" },
+      topics: { eyebrow: "目前提供的資訊", title: "清楚界定目前的資訊範圍。", items: [
+        { title: "產品概覽", copy: "探索目前為每項概念產品建立的用途與設計敘事。" },
+        { title: "設計方向", copy: "了解形態、材質表達與工作空間之間的共同視覺語言。" },
+        { title: "設定與規格", copy: "目前尚未定義設定說明、相容性或工程規格。" },
+        { title: "服務與保養", copy: "目前尚未建立保固條款、維修服務或正式保養方案。" },
+      ] },
+      faq: { eyebrow: "常見問題", title: "關於此概念網站。", items: [
+        { question: "可以購買 SOLEN 產品嗎？", answer: "目前未提供購買、價格、發表或供貨資訊。SOLEN 與其產品皆以虛構概念形式呈現。" },
+        { question: "產品圖片是技術參考嗎？", answer: "不是。核准圖片用於表達產品與視覺設計方向，不代表已確認的連接埠、尺寸、材質或效能。" },
+        { question: "可以在哪裡找到產品規格？", answer: "這些概念產品目前尚未定義工程規格與相容性資訊。" },
+        { question: "目前提供客戶支援嗎？", answer: "目前未提供即時聯絡管道、保固服務或支援申請系統。" },
+      ] },
+      help: { eyebrow: "關於這項計畫", title: "想了解更多背景？", copy: "認識 SOLEN 背後的想法，以及它所構想的科技與日常空間關係。", cta: "關於 SOLEN" },
+    },
   },
 } satisfies LocaleMessages;

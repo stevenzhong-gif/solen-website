@@ -1,4 +1,5 @@
-import { PageIntro, PageShell } from "@/components/page-shell";
+import { PageShell } from "@/components/page-shell";
+import { SupportFaq, SupportHelp, SupportHero, SupportProducts, SupportTopics } from "@/components/support-page";
 import { getPageContext, getPageMetadata, type RouteParams } from "@/i18n/page-context";
 
 export const generateMetadata = (props: RouteParams) => getPageMetadata(props, "support");
@@ -8,13 +9,12 @@ export default async function SupportPage(props: RouteParams) {
   const page = messages.pages.support;
 
   return <PageShell locale={locale} messages={messages}>
-    <PageIntro eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
-    <section className="support-grid" aria-label={page.title}>
-      {page.categories.map((category, index) => <article className="support-item" key={category.title}>
-        <p className="support-item__number" aria-hidden="true">0{index + 1}</p><h2>{category.title}</h2><p>{category.copy}</p>
-        <button type="button" disabled>{page.unavailable}</button>
-      </article>)}
-    </section>
-    <p className="support-notice">{page.notice}</p>
+    <article className="support-page">
+      <SupportHero content={page} />
+      <SupportProducts locale={locale} content={page.products} messages={messages} />
+      <SupportTopics content={page.topics} />
+      <SupportFaq content={page.faq} />
+      <SupportHelp locale={locale} content={page.help} />
+    </article>
   </PageShell>;
 }

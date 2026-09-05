@@ -62,16 +62,41 @@ export const en = {
       ] },
       products: { eyebrow: "Design in context", title: "One philosophy. Three distinct forms.", copy: "See how the shared SOLEN design direction takes shape across the concept product family.", conceptNotice: "These are concept products. Imagery communicates design direction and does not represent confirmed engineering specifications.", cta: "Explore all products" },
     },
-    about: { metadata: { title: "About — SOLEN", description: "SOLEN creates thoughtful technology that supports everyday environments without dominating them." }, eyebrow: "About SOLEN", title: "Technology, naturally.", intro: "SOLEN was created around a simple idea: technology should support everyday environments without dominating them.", sections: [
-      { title: "Our Philosophy", copy: "We believe useful technology can feel calm, considered and naturally at home. Every decision begins with how a product fits into real life." },
-      { title: "Our Approach", copy: "We bring function, material and form into balance—removing unnecessary complexity while preserving the details that make an object satisfying to use." },
-      { title: "Designed for Everyday Space", copy: "From focused work to unhurried living, SOLEN products are made to share your space quietly and support the routines that matter." },
-    ] },
-    support: { metadata: { title: "Support — SOLEN", description: "Explore the support information structure for SOLEN products." }, eyebrow: "SOLEN Support", title: "How can we help?", intro: "Choose a topic to explore the support structure for your SOLEN product.", categories: [
-      { title: "Product Help", copy: "Find clear guidance for using and caring for your SOLEN products." },
-      { title: "Setup & Getting Started", copy: "Follow simple introductions designed to help you begin with confidence." },
-      { title: "Warranty & Service", copy: "No warranty terms or service options are provided for this concept website." },
-      { title: "Contact", copy: "No contact channel is provided for this concept website." },
-    ], unavailable: "Information unavailable", notice: "SOLEN is a fictional brand. Live support and service requests are not available." },
+    about: {
+      metadata: { title: "About — SOLEN", description: "Meet SOLEN, a concept technology brand shaped around calm, considered everyday spaces." },
+      eyebrow: "About SOLEN", title: "Technology, naturally.", intro: "SOLEN begins with a simple idea: technology should support everyday environments without dominating them.", thesis: "A calmer relationship between objects, people and space.",
+      idea: { eyebrow: "The idea", title: "Technology can be present without asking for attention.", copy: "SOLEN imagines useful objects as part of the room around them. Their purpose is felt through clarity and ease—not through visual noise." },
+      relationship: { eyebrow: "A shared relationship", title: "Technology. Space. Life.", items: [
+        { title: "Technology", copy: "Considered as a quiet tool for everyday routines." },
+        { title: "Space", copy: "Treated as part of the design, never merely a backdrop." },
+        { title: "Life", copy: "Kept at the centre of every concept and interaction." },
+      ] },
+      approach: { eyebrow: "Our approach", title: "Begin with what belongs.", lead: "Clarity comes from deciding what an object needs to be—and what it does not.", copy: "SOLEN brings form, material direction and everyday purpose into balance. Each concept is shaped to feel understandable, composed and naturally at home within a modern space." },
+      principles: { eyebrow: "What guides us", title: "Quiet principles. Clear intent.", items: [
+        { title: "Consider the whole space.", copy: "See the product in relationship with the room and the people around it." },
+        { title: "Reduce visual noise.", copy: "Let hierarchy and proportion replace unnecessary complexity." },
+        { title: "Keep technology approachable.", copy: "Shape each concept with warmth, clarity and a calm presence." },
+        { title: "Support the everyday.", copy: "Focus on ordinary moments where thoughtful objects can belong." },
+      ] },
+      closing: { eyebrow: "SOLEN / Concept brand", title: "Designed for the life around technology.", copy: "The SOLEN identity connects a family of concept products through one shared belief: technology feels most considered when it belongs to its surroundings.", conceptNotice: "SOLEN is a fictional concept brand. Its products and imagery express a design direction, not confirmed commercial or engineering specifications.", designCta: "Explore our design", productsCta: "View the collection" },
+    },
+    support: {
+      metadata: { title: "Support — SOLEN", description: "Explore available concept information for the SOLEN product family." },
+      eyebrow: "SOLEN Support", title: "Start with what you need.", intro: "Explore the product family, understand what information is currently available and find clear answers about this concept website.", conceptNotice: "SOLEN is a fictional concept brand. Live support, service requests and product documentation are not currently available.",
+      products: { eyebrow: "Choose a product", title: "Explore the product family.", copy: "Each product page presents the approved concept story, design direction and relationship to the SOLEN family.", cta: "View concept" },
+      topics: { eyebrow: "Available information", title: "Clear about what is—and is not—defined.", items: [
+        { title: "Product overview", copy: "Explore the purpose and design narrative currently established for each concept product." },
+        { title: "Design direction", copy: "Understand the visual language connecting form, material expression and workspace." },
+        { title: "Setup and specifications", copy: "Setup instructions, compatibility and engineering specifications have not been defined." },
+        { title: "Service and care", copy: "Warranty terms, repair services and official care programmes have not been established." },
+      ] },
+      faq: { eyebrow: "Common questions", title: "About this concept website.", items: [
+        { question: "Can I purchase SOLEN products?", answer: "No purchase, pricing, release or availability information is provided. SOLEN and its products are presented as fictional concepts." },
+        { question: "Are the product images technical references?", answer: "No. The approved images communicate product and visual design direction; they do not confirm ports, dimensions, materials or performance." },
+        { question: "Where can I find product specifications?", answer: "Engineering specifications and compatibility details have not been defined for these concept products." },
+        { question: "Is customer support available?", answer: "No live contact channel, warranty service or support-request system is currently provided." },
+      ] },
+      help: { eyebrow: "About this project", title: "Looking for more context?", copy: "Learn about the idea behind SOLEN and the relationship it imagines between technology and everyday space.", cta: "About SOLEN" },
+    },
   },
 } satisfies LocaleMessages;

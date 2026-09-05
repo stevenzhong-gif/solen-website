@@ -44,13 +44,19 @@ export type LocaleMessages = {
       products: { eyebrow: string; title: string; copy: string; conceptNotice: string; cta: string };
     };
     about: {
-      metadata: MetadataMessages; eyebrow: string; title: string; intro: string;
-      sections: Array<{ title: string; copy: string }>;
+      metadata: MetadataMessages; eyebrow: string; title: string; intro: string; thesis: string;
+      idea: { eyebrow: string; title: string; copy: string };
+      relationship: { eyebrow: string; title: string; items: Array<{ title: string; copy: string }> };
+      approach: { eyebrow: string; title: string; lead: string; copy: string };
+      principles: { eyebrow: string; title: string; items: Array<{ title: string; copy: string }> };
+      closing: { eyebrow: string; title: string; copy: string; conceptNotice: string; designCta: string; productsCta: string };
     };
     support: {
-      metadata: MetadataMessages; eyebrow: string; title: string; intro: string;
-      categories: Array<{ title: string; copy: string }>;
-      unavailable: string; notice: string;
+      metadata: MetadataMessages; eyebrow: string; title: string; intro: string; conceptNotice: string;
+      products: { eyebrow: string; title: string; copy: string; cta: string };
+      topics: { eyebrow: string; title: string; items: Array<{ title: string; copy: string }> };
+      faq: { eyebrow: string; title: string; items: Array<{ question: string; answer: string }> };
+      help: { eyebrow: string; title: string; copy: string; cta: string };
     };
   };
 };

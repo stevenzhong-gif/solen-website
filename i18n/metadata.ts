@@ -23,11 +23,13 @@ export function createLocalizedMetadata({ locale, path = "", title, description 
       new URL(`/${alternateLocale}${path}`, siteConfig.productionUrl).toString(),
     ]),
   );
+  languageAlternates["x-default"] = new URL(`/en${path}`, siteConfig.productionUrl).toString();
 
   return {
     metadataBase: siteConfig.productionUrl,
     title,
     description,
+    robots: { index: true, follow: true },
     alternates: {
       canonical: new URL(localizedPath, siteConfig.productionUrl),
       languages: languageAlternates,
@@ -42,6 +44,7 @@ export function createLocalizedMetadata({ locale, path = "", title, description 
       url: new URL(localizedPath, siteConfig.productionUrl),
       title,
       description,
+      images: [{ url: new URL("/images/solen-logo.jpg", siteConfig.productionUrl), alt: "SOLEN" }],
     },
   };
 }

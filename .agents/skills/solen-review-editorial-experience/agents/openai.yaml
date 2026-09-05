@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOLEN Editorial Experience Review"
+  short_description: "Review SOLEN editorial brand-page quality"
+  default_prompt: "Use $solen-review-editorial-experience to review a SOLEN editorial brand page for narrative hierarchy and distinct visual rhythm."
