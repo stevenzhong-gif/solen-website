@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { ProductDetailMessages } from "@/i18n/types";
 import { getProductDetailHref, products, type ProductId } from "@/content/products";
+import { SmartDockConcept3D } from "@/components/product-concept-3d";
 
 type ProductComposition = "dock" | "surface" | "vertical";
 
@@ -23,12 +24,13 @@ export function ProductConceptNotice({ children }: { children: string }) {
   return <aside className="product-concept-notice"><span aria-hidden="true">Concept / 01</span><p>{children}</p></aside>;
 }
 
-export function ProductStoryStage({ name, image, chapters, composition = "dock" }: { name: string; image: (typeof products)[number]["image"]; chapters: ProductStoryChapter[]; composition?: ProductComposition }) {
+export function ProductStoryStage({ name, image, chapters, composition = "dock", concept3d = false, modelLabel = "" }: { name: string; image: (typeof products)[number]["image"]; chapters: ProductStoryChapter[]; composition?: ProductComposition; concept3d?: boolean; modelLabel?: string }) {
   return <div className={`product-story product-story--${composition}`}>
     <div className="product-story__stage" aria-hidden="true">
       <div className="product-story__visual">
         <span className="product-story__name">SOLEN / {name}</span>
-        <Image src={image} alt="" sizes="(max-width: 900px) 100vw, 52vw" />
+        <Image className="product-story__fallback" src={image} alt="" sizes="(max-width: 900px) 100vw, 52vw" />
+        {concept3d && <><SmartDockConcept3D /><span className="product-story__model-label">{modelLabel}</span></>}
         <span className="product-story__axis" />
       </div>
     </div>

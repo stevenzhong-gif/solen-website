@@ -2,7 +2,7 @@ import type { LocaleMessages } from "../types";
 
 export const zhTW = {
   metadata: { title: "SOLEN — 科技，自然融入生活。", description: "用心設計的科技，自然融入你的空間。" },
-  accessibility: { home: "SOLEN 首頁", primaryNav: "主要導覽", footerNav: "頁尾導覽", mobileNav: "行動版導覽", openMenu: "開啟導覽選單", closeMenu: "關閉導覽選單", language: "選擇語言", learnAbout: "進一步了解", skipToContent: "跳至主要內容" },
+  accessibility: { home: "SOLEN 首頁", primaryNav: "主要導覽", footerNav: "頁尾導覽", mobileNav: "行動版導覽", openMenu: "開啟導覽選單", closeMenu: "關閉導覽選單", language: "選擇語言", learnAbout: "進一步了解", skipToContent: "跳至主要內容", conceptModel: "SOLEN 概念 3D 模型" },
   nav: { products: "產品", design: "設計", about: "關於", support: "支援" },
   hero: { eyebrow: "SOLEN / 智慧桌面擴充底座", title: "科技，自然融入生活。", copy: "用心設計的科技，\n自然融入你的空間。", cta: "探索產品", imageAlt: "暖銀色 SOLEN 智慧桌面擴充底座" },
   philosophy: { eyebrow: "品牌理念", title: "為你的空間而設計。", copy: "科技不應佔據生活，而應自然融入日常工作與生活環境。" },

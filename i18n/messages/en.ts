@@ -2,7 +2,7 @@ import type { LocaleMessages } from "../types";
 
 export const en = {
   metadata: { title: "SOLEN — Technology, naturally.", description: "Thoughtful technology, designed to belong in your space." },
-  accessibility: { home: "SOLEN home", primaryNav: "Primary navigation", footerNav: "Footer navigation", mobileNav: "Mobile navigation", openMenu: "Open navigation menu", closeMenu: "Close navigation menu", language: "Select language", learnAbout: "Learn more about", skipToContent: "Skip to content" },
+  accessibility: { home: "SOLEN home", primaryNav: "Primary navigation", footerNav: "Footer navigation", mobileNav: "Mobile navigation", openMenu: "Open navigation menu", closeMenu: "Close navigation menu", language: "Select language", learnAbout: "Learn more about", skipToContent: "Skip to content", conceptModel: "SOLEN Concept 3D Model" },
   nav: { products: "Products", design: "Design", about: "About", support: "Support" },
   hero: { eyebrow: "SOLEN / Smart Dock", title: "Technology, naturally.", copy: "Thoughtful technology,\ndesigned to belong in your space.", cta: "Explore Products", imageAlt: "SOLEN Smart Dock in warm silver" },
   philosophy: { eyebrow: "Our philosophy", title: "Designed for your space.", copy: "Technology should naturally integrate into everyday work and living environments." },

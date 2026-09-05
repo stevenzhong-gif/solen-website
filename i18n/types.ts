@@ -18,7 +18,7 @@ export type LocaleMessages = {
   metadata: MetadataMessages;
   accessibility: {
     home: string; primaryNav: string; footerNav: string; mobileNav: string;
-    openMenu: string; closeMenu: string; language: string; learnAbout: string; skipToContent: string;
+    openMenu: string; closeMenu: string; language: string; learnAbout: string; skipToContent: string; conceptModel: string;
   };
   nav: { products: string; design: string; about: string; support: string };
   hero: { eyebrow: string; title: string; copy: string; cta: string; imageAlt: string };

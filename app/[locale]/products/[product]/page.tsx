@@ -40,7 +40,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <article className="product-detail">
       <ProductHero name={messages.products[product.id].name} image={product.image} content={content} composition={composition} />
       <ProductConceptNotice>{content.conceptNotice}</ProductConceptNotice>
-      <ProductStoryStage name={messages.products[product.id].name} image={product.image} chapters={storyChapters} composition={composition} />
+      <ProductStoryStage name={messages.products[product.id].name} image={product.image} chapters={storyChapters} composition={composition} concept3d={product.id === "smart-dock"} modelLabel={messages.accessibility.conceptModel} />
       <ProductMaterialSection content={content.material} composition={composition} />
       <ProductFamilyNavigation locale={locale} current={product.id} content={content.family} productNames={names} />
     </article>
