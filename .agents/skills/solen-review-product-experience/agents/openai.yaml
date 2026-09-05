@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOLEN Product Experience Review"
+  short_description: "Review SOLEN product storytelling and route integrity"
+  default_prompt: "Use $solen-review-product-experience to review a SOLEN product detail page and its family journey."

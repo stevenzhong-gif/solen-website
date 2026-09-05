@@ -1,14 +1,39 @@
 import type { Locale } from "@/i18n/config";
+import { localeLabels, locales } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
+import { getProductHref, products } from "@/content/products";
+import Link from "next/link";
+import { LocaleLink } from "./locale-link";
+import { NavigationLink } from "./navigation-link";
 
 export function Footer({ locale, messages }: { locale: Locale; messages: Messages }) {
-  const footerLinks = [
-    { label: messages.nav.products, path: "products" }, { label: messages.nav.design, path: "design" },
-    { label: messages.nav.about, path: "about" }, { label: messages.nav.support, path: "support" },
-  ];
-  return <footer className="footer" id="support">
-    <div><p className="footer__brand">SOLEN</p><p className="footer__slogan">{messages.footer.slogan}</p></div>
-    <nav aria-label={messages.accessibility.primaryNav}>{footerLinks.map((item) => <a key={item.path} href={`/${locale}/${item.path}`}>{item.label}</a>)}</nav>
-    <p className="footer__meta">© {new Date().getFullYear()} SOLEN<br />{messages.footer.note}</p>
+  return <footer className="footer">
+    <div className="footer__lead">
+      <Link className="footer__brand" href={`/${locale}`}>SOLEN</Link>
+      <p className="footer__slogan">{messages.footer.slogan}</p>
+    </div>
+    <nav className="footer__directory" aria-label={messages.accessibility.footerNav}>
+      <div className="footer__group">
+        <p>{messages.footer.groups.products}</p>
+        {products.map((product) => <Link key={product.id} href={getProductHref(locale, product)}>{messages.products[product.id].name}</Link>)}
+      </div>
+      <div className="footer__group">
+        <p>{messages.footer.groups.discover}</p>
+        <NavigationLink href={`/${locale}/design`}>{messages.nav.design}</NavigationLink>
+        <NavigationLink href={`/${locale}/about`}>{messages.nav.about}</NavigationLink>
+      </div>
+      <div className="footer__group">
+        <p>{messages.footer.groups.support}</p>
+        <NavigationLink href={`/${locale}/support`}>{messages.nav.support}</NavigationLink>
+      </div>
+      <div className="footer__group footer__languages">
+        <p>{messages.footer.groups.language}</p>
+        {locales.map((item) => <LocaleLink key={item} locale={item}>{localeLabels[item]}</LocaleLink>)}
+      </div>
+    </nav>
+    <div className="footer__base">
+      <p>© {new Date().getFullYear()} SOLEN</p>
+      <p>{messages.footer.note}</p>
+    </div>
   </footer>;
 }

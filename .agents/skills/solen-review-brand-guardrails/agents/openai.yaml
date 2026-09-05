@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOLEN Brand Guardrails Review"
+  short_description: "Review SOLEN brand, visuals, and unsupported claims"
+  default_prompt: "Use $solen-review-brand-guardrails to review the current SOLEN website changes for brand and claims compliance."

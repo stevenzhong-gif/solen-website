@@ -1,11 +1,9 @@
 import Image from "next/image";
-import smartDock from "@/public/images/smart-dock.jpg";
-import wirelessCharger from "@/public/images/wireless-charger.jpg";
-import desktopHub from "@/public/images/desktop-hub.jpg";
+import Link from "next/link";
+import { getProductHref, products } from "@/content/products";
 import { PageIntro, PageShell } from "@/components/page-shell";
 import { getPageContext, getPageMetadata, type RouteParams } from "@/i18n/page-context";
 
-const images = [smartDock, wirelessCharger, desktopHub];
 export const generateMetadata = (props: RouteParams) => getPageMetadata(props, "products");
 
 export default async function ProductsPage(props: RouteParams) {
@@ -15,18 +13,22 @@ export default async function ProductsPage(props: RouteParams) {
   return <PageShell locale={locale} messages={messages}>
     <PageIntro eyebrow={page.eyebrow} title={page.title} />
     <div className="product-editorial">
-      {messages.products.map((product, index) => <article className="product-feature" key={product.name}>
-        <div className="product-feature__visual">
+      {products.map((product, index) => {
+        const productMessages = messages.products[product.id];
+        const href = getProductHref(locale, product);
+        return <article className="product-feature" id={product.slug} key={product.id}>
+        <Link className="product-feature__visual" href={href} aria-label={`${messages.accessibility.learnAbout} ${productMessages.name}`}>
           <span className="product-feature__number" aria-hidden="true">0{index + 1}</span>
-          <Image src={images[index]} alt={`SOLEN ${product.name}`} sizes="(max-width: 900px) 100vw, 60vw" />
-        </div>
+          <Image src={product.image} alt={`SOLEN ${productMessages.name}`} sizes="(max-width: 900px) 100vw, 60vw" />
+        </Link>
         <div className="product-feature__copy">
           <p className="eyebrow">SOLEN / 0{index + 1}</p>
-          <h2>{product.name}</h2>
-          <p className="product-feature__message">{product.description}</p>
-          <p className="product-feature__description">{page.items[index].description}</p>
+          <h2><Link href={href}>{productMessages.name}</Link></h2>
+          <p className="product-feature__message">{productMessages.description}</p>
+          <p className="product-feature__description">{productMessages.overview}</p>
+          <Link className="product-feature__link" href={href} aria-label={`${messages.accessibility.learnAbout} ${productMessages.name}`}>{messages.collection.learnMore}<span aria-hidden="true">↗</span></Link>
         </div>
-      </article>)}
+      </article>})}
     </div>
   </PageShell>;
 }

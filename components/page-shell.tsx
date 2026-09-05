@@ -5,7 +5,7 @@ import { Footer } from "./footer";
 import { Header } from "./header";
 
 export function PageShell({ locale, messages, children }: { locale: Locale; messages: Messages; children: ReactNode }) {
-  return <><Header locale={locale} messages={messages} /><main className="inner-page">{children}</main><Footer locale={locale} messages={messages} /></>;
+  return <><Header locale={locale} messages={messages} /><main className="inner-page" id="main-content">{children}</main><Footer locale={locale} messages={messages} /></>;
 }
 
 export function PageIntro({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) {

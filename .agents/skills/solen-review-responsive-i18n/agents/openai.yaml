@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOLEN Responsive and i18n Review"
+  short_description: "Review SOLEN responsive, CJK, and navigation quality"
+  default_prompt: "Use $solen-review-responsive-i18n to review the current SOLEN pages across locales and target viewport sizes."
